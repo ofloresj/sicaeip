@@ -1,0 +1,22 @@
+<div class="login">
+	<form class="form-signin" #formLogin="ngForm" (ngSubmit)="onSubmit()">
+		<a routerLink="/"><img class="mb-4 img-fluid" src="assets/img/logo.png" alt="" height="68"></a>
+		<label for="login" class="sr-only">Usuario</label>
+		<input type="text" id="login" class="form-control" placeholder="Usuario" name="login" #login="ngModel" [(ngModel)]="usuariosIngreso.login" required="">
+
+		<span *ngIf="login.touched && login.invalid" [ngStyle]="{'color':'red', 'font.size':'14px', 'text-align':'center'}">Favor de llenar este campo</span>
+
+		<label for="inputPassword" class="sr-only">Contraseña</label>
+		<input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" name="passwd" #passwd="ngModel" [(ngModel)]="usuariosIngreso.passwd" required="">
+	
+		<span *ngIf="passwd.touched && passwd.invalid" [ngStyle]="{'color':'red', 'font.size':'14px', 'text-align':'center'}">Favor de llenar este campo</span>
+
+		<button class="btn btn-block btn-outline-secondary" type="submit">Iniciar Sesion</button>
+
+		<div *ngIf="validarIngreso" style="color: red; text-align: center;">
+			Datos Incorrectos
+		</div>
+		
+		<p class="mt-5 mb-3 text-muted text-center">&copy; SICAEIP 2018</p>
+	</form>
+</div>

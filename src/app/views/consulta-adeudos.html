@@ -1,0 +1,240 @@
+<div class="container-fluid" *ngIf="!detalle">
+    <div class="d-flex justify-content-center"> 
+        <h5>Elige el método de búsqueda</h5>
+    </div>
+    <div class="d-flex justify-content-center"> 
+        <button class="agregar btn btn-outline-cat-color" (click)="buscaCuenta()"><i class="fa fa-search"></i> Cuenta</button>
+        <button class="agregar btn btn-outline-cat-color" (click)="buscaNombre()"><i class="fa fa-search"></i> Nombre</button>
+    </div>    
+    <div class="row">
+        <div class="col-md-12" *ngIf="cuenta">
+            <div class="card card-cat-color">
+                <div class="card-header">
+                    <h3 class="card-title-cat-color">Consultar por número de cuenta</h3>
+                </div>
+                <form class="form-horizontal">
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label for="" class="col-sm-2 control-label">Introduce la cuenta catastral</label>
+                            <div class="col-sm-12">
+                                <input type="number" class="form-control" id="inputEmail3" placeholder="Número de Cuenta">
+                            </div>
+                        </div>                        
+                    </div>
+                    <div class="card-footer">
+                        <button type="submit" class="btn btn-default float-right" (click)="cancelar()"><i class="fa fa-times"></i> Cancelar</button>
+                        <button type="submit" class="btn btn-cat-color float-right" (click)="consultaCuenta()"><i class="fa fa-search"></i> Consultar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-12" *ngIf="nombre">
+            <div class="card card-cat-color">
+                <div class="card-header">
+                    <h3 class="card-title-cat-color">Consultar por nombre </h3>
+                </div>
+                <form class="form-horizontal">
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label for="" class="col-sm-2 control-label">Nombre</label>
+                            <div class="col-sm-12">
+                                <input type="text" class="form-control" placeholder="Nombre">
+                            </div>
+                            <br>
+                            <label for="" class="col-sm-2 control-label">Apellido Paterno</label>
+                            <div class="col-sm-12">
+                                <input type="text" class="form-control" placeholder="Apellido Paterno">
+                            </div>
+                            <br>
+                            <label for="" class="col-sm-2 control-label">Apellido Materno</label>
+                            <div class="col-sm-12">
+                                <input type="text" class="form-control" placeholder="Apellido Materno">
+                            </div>
+                        </div>                       
+                    </div>
+                    <div class="card-footer">
+                        <button type="submit" class="btn btn-default float-right" (click)="cancelar()"><i class="fa fa-times"></i> Cancelar</button>
+                        <button type="submit" class="btn btn-cat-color float-right" (click)="consultaNombre()"><i class="fa fa-search"></i> Consultar</button>                        
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container-fluid" *ngIf="detalle">
+    <div class="row">
+        <div class="col-12">
+            <div class="invoice p-3 mb-3">
+                <div class="row">
+                    <div class="col-12">
+                        <h4>
+                            <i class="fa fa-user"></i> Datos generales del contribuyente y del predio
+                            <small class="float-right"> {{ today | date:'shortDate' }}  {{ today | date:'shortTime' }}</small>
+
+                        </h4>
+                    </div>
+                </div>
+                <div class="row invoice-info">
+                    <div class="col-sm-6 invoice-col">
+                        <address>
+                            <br>
+                            <strong>Nombre</strong> Hortencia Aguilar Gomez<br>
+                            <strong>Numero de Cuenta: </strong>1250<br>
+                            <b>Tipo predio:</b> Urbano Construido<br>
+                            <b>Comunidad: </b><br>                            
+                        </address>
+                    </div>
+                    <div class="col-sm-6 invoice-col">
+                        <address>
+                            <br>
+                            <b>Comunidad: </b><br>
+                            <b>Paraje: </b><br>
+                            <b>Calle: </b>Av. Guadalupe Victoria  <b>Numero ext: </b>#50<b> Numero ext: </b>#3<br>
+                            <b>Municipio: </b>Pilcaya, Gro.<br>
+                            
+                        </address>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-12 table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Año a pagar</th>
+                                    <th>Año que adeuda</th>
+                                    <th>Pago base</th>
+                                    <th>Imp. pro Educ</th>
+                                    <th>Imp. por Cam</th>
+                                    <th>Recargos</th>
+                                    <th>Subtotal</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-center">
+                                        <label>
+                                            <input type="checkbox" class="minimal">
+                                        </label></td>
+                                    <td>2012</td>
+                                    <td>$250</td>
+                                    <td>$50</td>
+                                    <td>$50</td>
+                                    <td>$10</td>
+                                    <td>350</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">
+                                        <label>
+                                            <input type="checkbox" class="minimal">
+                                        </label></td>
+                                    <td>2012</td>
+                                    <td>$250</td>
+                                    <td>$50</td>
+                                    <td>$50</td>
+                                    <td>$10</td>
+                                    <td>350</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">
+                                        <label>
+                                            <input type="checkbox" class="minimal">
+                                        </label></td>
+                                    <td>2012</td>
+                                    <td>$250</td>
+                                    <td>$50</td>
+                                    <td>$50</td>
+                                    <td>$10</td>
+                                    <td>350</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">
+                                        <label>
+                                            <input type="checkbox" class="minimal">
+                                        </label></td>
+                                    <td>2012</td>
+                                    <td>$250</td>
+                                    <td>$50</td>
+                                    <td>$50</td>
+                                    <td>$10</td>
+                                    <td>350</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">
+                                        <label>
+                                            <input type="checkbox" class="minimal">
+                                        </label></td>
+                                    <td>2012</td>
+                                    <td>$250</td>
+                                    <td>$50</td>
+                                    <td>$50</td>
+                                    <td>$10</td>
+                                    <td>350</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">
+                                        <label>
+                                            <input type="checkbox" class="minimal">
+                                        </label></td>
+                                    <td>2012</td>
+                                    <td>$250</td>
+                                    <td>$50</td>
+                                    <td>$50</td>
+                                    <td>$10</td>
+                                    <td>350</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-6">
+                        
+                    </div>
+                    <div class="col-6">
+                        <p class="lead">Detalles del saldo</p>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <tr>
+                                    <th style="width:50%">Subtotal:</th>
+                                    <td>$250.30</td>
+                                </tr>
+                                <tr>
+                                    <th>Imp. pro Educ</th>
+                                    <td>$10.34</td>
+                                </tr>
+                                <tr>
+                                    <th>Imp. por Cam</th>
+                                    <td>$10.34</td>
+                                </tr>
+                                <tr>
+                                    <th>Recargos</th>
+                                    <td>$5.80</td>
+                                </tr>
+                                <tr>
+                                    <th>Total:</th>
+                                    <td>$265.24</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="row no-print">
+                    <div class="col-12">
+                        
+                        <button type="button" class="btn btn-default float-right" style="margin-right: 5px;" (click)="cancelar()">
+                            <i class="fa fa-times"></i> Cancelar
+                        </button>
+                        <button type="button" class="btn btn-cat-color float-right">
+                            <i class="fa fa-file-pdf-o"></i> Generar orden de pago
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

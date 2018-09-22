@@ -1,0 +1,223 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card card-cat-color">
+                <div class="card-header">
+                    <h3 class="card-title">Actualizar contribuyente</h3>
+                </div>
+                <form class="form-horizontal">
+                    <div class="card-body">  
+                        <br>
+                        <div class="form-group input-group input-group">
+                            <input type="text" class="form-control" placeholder="Introduce la cuenta del contribuyente que se va a actualizar">
+                            <span class="input-group-append">
+                                <button type="button" class="btn btn-secondary btn-flat" (click)="obtenerContribuyente()">Ir!</button>
+                            </span>
+                        </div>
+                        <br>
+                        <div *ngIf="contribuyente">             
+                            <div class="row" >
+                                <div class="col-md-4">
+                                    <br>
+                                    <label>Nombre</label>
+                                    <div class="">
+                                        <input type="text" class="form-control" id="">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <br>
+                                    <label>Apellido Paterno</label>
+                                    <div class="">
+                                        <input type="text" class="form-control" id="">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <br>
+                                    <label>Apellido Materno</label>
+                                    <div class="">
+                                        <input type="text" class="form-control" id="">
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <label>Ubicación del predio</label>
+                                </div>
+                                <div class="col-md-3">
+                                    <br>
+                                    <select class="form-control">
+                                        <option active disabled>Comunidad</option>
+                                        <option>option 2</option>
+                                        <option>option 3</option>
+                                        <option>option 4</option>
+                                        <option>option 5</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3">
+                                    <br>
+                                    <select class="form-control">
+                                        <option active disabled>Paraje</option>
+                                        <option>option 2</option>
+                                        <option>option 3</option>
+                                        <option>option 4</option>
+                                        <option>option 5</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3">
+                                    <br>
+                                    <select class="form-control">
+                                        <option active disabled>Colonia</option>
+                                        <option>option 2</option>
+                                        <option>option 3</option>
+                                        <option>option 4</option>
+                                        <option>option 5</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3">
+                                    <br>
+                                    <select class="form-control">
+                                        <option active disabled>Calle</option>
+                                        <option>option 2</option>
+                                        <option>option 3</option>
+                                        <option>option 4</option>
+                                        <option>option 5</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <br>
+                                    <label>Numero Exterior</label>
+                                    <div class="">
+                                        <input type="number" class="form-control" id="">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <br>
+                                    <label>Numero Interior</label>
+                                    <div class="">
+                                        <input type="number" class="form-control" id="">
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <br>
+                                    <label>Domicilio para recibir notificaciones</label>
+                                    <div class="">
+                                        <input type="text" class="form-control" id="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <br>
+                                    <label>Localidad</label>
+                                    <div class="">
+                                        <input type="text" class="form-control" id="">
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="col-md-6">
+                                    <br>
+                                    <label>Base gravable</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">$</span>
+                                        </div>
+                                        <input type="text" class="form-control">
+                                    </div>     
+                                </div>                              
+                            </div>
+                            <br>
+                            <div class="row">                               
+                                <div class="col-md-6">
+                                    <label>Sup. Terreno</label>
+                                    <div class="">
+                                        <input type="text" class="form-control" id="">
+                                    </div>
+                                </div> 
+                                <div class="col-md-6">
+                                    <label>Valor Terreno</label>
+                                    <div class="">
+                                        <input type="text" class="form-control" id="">
+                                    </div>
+                                </div> 
+                                <div class="col-md-6">
+                                    <br>
+                                    <label>Sup. Construcción</label>
+                                    <div class="">
+                                        <input type="text" class="form-control" id="">
+                                    </div>
+                                </div> 
+                                <div class="col-md-6">
+                                    <br>
+                                    <label>Valor Construcción</label>
+                                    <div class="">
+                                        <input type="text" class="form-control" id="">
+                                    </div>
+                                </div>                                      
+                            </div>
+                            <br>
+                            <label>Colindantes:</label>
+                            <div class="row">                               
+                                <div class="col-md-6">
+                                    <label>Al norte con:</label>
+                                    <div class="">
+                                        <input type="text" class="form-control" id="">
+                                    </div>
+                                </div> 
+                                <div class="col-md-6">
+                                    <label>En:</label>
+                                    <div class="">
+                                        <input type="text" class="form-control" id="">
+                                    </div>
+                                </div> 
+                                <div class="col-md-6">
+                                    <br>
+                                    <label>Al sur con:</label>
+                                    <div class="">
+                                        <input type="text" class="form-control" id="">
+                                    </div>
+                                </div> 
+                                <div class="col-md-6">
+                                    <br>
+                                    <label>En:</label>
+                                    <div class="">
+                                        <input type="text" class="form-control" id="">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <br>
+                                    <label>Al oriente con:</label>
+                                    <div class="">
+                                        <input type="text" class="form-control" id="">
+                                    </div>
+                                </div> 
+                                <div class="col-md-6">
+                                    <br>
+                                    <label>En:</label>
+                                    <div class="">
+                                        <input type="text" class="form-control" id="">
+                                    </div>
+                                </div>  
+                                <div class="col-md-6">
+                                    <br>
+                                    <label>Al poniente con:</label>
+                                    <div class="">
+                                        <input type="text" class="form-control" id="">
+                                    </div>
+                                </div> 
+                                <div class="col-md-6">
+                                    <br>
+                                    <label>En:</label>
+                                    <div class="">
+                                        <input type="text" class="form-control" id="">
+                                    </div>
+                                </div>                                      
+                            </div>
+                        </div>         
+                    </div>
+                    <div class="card-footer" *ngIf="contribuyente">
+                        <button type="submit" class="btn btn-cat-color">Guargar</button>
+                        <button type="submit" class="btn btn-default float-right">Cancelar</button>
+                    </div>
+                </form>
+            </div>            
+        </div>
+    </div>
+</div>
